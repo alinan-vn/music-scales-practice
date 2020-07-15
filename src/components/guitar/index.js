@@ -92,7 +92,7 @@ class Guitar extends React.Component{
             }
             return (
                 <div>
-                    <button>Another scale?</button>
+                    <button onClick={this.setPractice} className='guitar__reset-scale'>Another scale?</button>
                     <GuitarScales settings={props} />
 
                 </div>
@@ -100,13 +100,17 @@ class Guitar extends React.Component{
         }
     }
 
+    setPractice = () => {
+        this.setState(prevState =>({
+                ...prevState,
+                practice: !prevState.practice
+            })
+        )
+    }
+
     practice = () => {
         if(this.state.scale){
-            console.log(this.state)
-            this.setState({
-                ...this.state,
-                practice: true
-            })
+            this.setPractice()
         } else {
             alert('Please select a Scale </3')
         }

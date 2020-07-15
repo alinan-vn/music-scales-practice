@@ -48,4 +48,14 @@
         border-radius: 24px;
     }
 
+    &__reset-scale {
+        background-color: $second-color;
+        color: $third-color;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 24px;
+    }
 }
