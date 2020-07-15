@@ -8,7 +8,8 @@
     }
 
     &__btns {
-        padding: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
     }
 
     &__btn {
@@ -36,6 +37,15 @@
             margin: 1rem;
             border-radius: 16px;
         }
+    }
+
+    &__practice-btn {
+        background-color: $fifth-color;
+        color: $third-color;
+        font-size: 3rem;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 24px;
     }
 
 }

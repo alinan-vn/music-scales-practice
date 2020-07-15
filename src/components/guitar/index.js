@@ -1,28 +1,41 @@
 import React from 'react';
+import GuitarScales from './scales/index';
 
 class Guitar extends React.Component{
     constructor(){
         super()
         this.state = {
+            practice: false,
             sheetMusic: 'On',
-            tab: 'On'
+            tab: 'On',
+            scale: false
         }
     }
 
-    scaleClick = (e) => {
-        let parent = e.target.parentElement
-
+    resetScaleClasses = (parent) => {
         for (const btn of parent.children){
             btn.className = ''
             btn.classList.add('guitar__scaleBtn')
         }
+    }
 
-        if(e.target.classList[0] === 'guitar__scaleBtn'){
-            e.target.className = ''
-            e.target.classList.add('guitar__scaleBtn-clicked')
+    scaleClick = (e) => {
+        let scaleBtn = e.target
+
+        if(scaleBtn.className === 'guitar__scaleBtn'){
+            this.resetScaleClasses(scaleBtn.parentElement)
+            scaleBtn.className = ''
+            scaleBtn.className = 'guitar__scaleBtn-clicked'
+            this.setState({
+                ...this.state,
+                scale: scaleBtn.name 
+            })
         } else {
-            e.target.className = ''
-            e.target.classList.add('guitar__scaleBtn')
+            this.resetScaleClasses(scaleBtn.parentElement)
+            this.setState({
+                ...this.state,
+                scale: false 
+            })
         }
     }
 
@@ -52,20 +65,57 @@ class Guitar extends React.Component{
                 [readType]: 'On'
             })
         }
+    }
 
+    scalesShow = () => {
+        if(!this.state.practice){
+            return(
+                <div>
+                    <h1>Guitar (major) Scales!</h1>
+                    <div className='guitar__btns'>
+                        <button onClick={(e) => this.readingType(e)} name='sheetMusic' className='guitar__btn'>Sheet Music: {this.state.sheetMusic}</button>
+                        <button onClick={(e) => this.readingType(e)} name='tab' className='guitar__btn'>Tab: {this.state.tab}</button>
+                    </div>
+                    <div className='guitar__btns'>
+                        { this.scalesBtns() }
+                    </div>
+                    <div> 
+                        <button onClick={this.practice} className='guitar__practice-btn'>Practice!</button>
+                    </div>
+                </div>
+            )
+        } else {
+            const props = {
+                sheetMusic: this.state.sheetMusic,
+                tab: this.state.tab,
+                scale: this.state.scale
+            }
+            return (
+                <div>
+                    <button>Another scale?</button>
+                    <GuitarScales settings={props} />
+
+                </div>
+            )
+        }
+    }
+
+    practice = () => {
+        if(this.state.scale){
+            console.log(this.state)
+            this.setState({
+                ...this.state,
+                practice: true
+            })
+        } else {
+            alert('Please select a Scale </3')
+        }
     }
 
     render(){
         return(
             <section className='guitar'>
-                <h1>Guitar Scales!</h1>
-                <div className='guitar__btns'>
-                    <button onClick={(e) => this.readingType(e)} name='sheetMusic' className='guitar__btn'>Sheet Music: {this.state.sheetMusic}</button>
-                    <button onClick={(e) => this.readingType(e)} name='tab' className='guitar__btn'>Tab: {this.state.tab}</button>
-                </div>
-                <div className='guitar__btns'>
-                    { this.scalesBtns() }
-                </div>
+                { this.scalesShow() }
             </section>
         )
     }
