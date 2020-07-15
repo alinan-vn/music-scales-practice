@@ -4,6 +4,7 @@ import './scss/main.scss';
 
 import Landing from './components/landing/index';
 import Guitar from './components/guitar/index';
+import Piano from './components/piano/index';
 
 class App extends React.Component{
   render(){
@@ -11,6 +12,7 @@ class App extends React.Component{
       <Router>
         <Route exact path='/' component={Landing} />
         <Route exact path='/guitar' component={Guitar} />
+        <Route exact path='/piano' component={Piano} />
       </Router>
     )
   }
