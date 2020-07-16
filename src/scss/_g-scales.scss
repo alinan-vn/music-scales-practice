@@ -1,0 +1,15 @@
+.g-scales{
+    &__heading {
+        color: $fourth-color;
+        font-size: 3rem;
+    }
+
+    &__tab {
+        border-radius: 16px;
+        margin-bottom: 5rem;
+    }
+
+    &__sheet {
+        border-radius: 24px;
+    }
+}

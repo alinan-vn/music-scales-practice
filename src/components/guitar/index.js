@@ -40,11 +40,11 @@ class Guitar extends React.Component{
     }
 
     scalesBtns = () => {
-        const scaleKeys = ['G', 'Ab', 'A', 'Bb', 'C', 'Db', 'D', 'Eb', 'F', 'Gb']
+        const scaleKeys = ['G', 'Ab', 'A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb']
 
         return scaleKeys.map((note, ind) => {
             return(
-                <button id={ind} onClick={(e) => this.scaleClick(e)} name={note} className='guitar__scaleBtn'>{note}</button>
+                <button key={ind} onClick={(e) => this.scaleClick(e)} name={note} className='guitar__scaleBtn'>{note}</button>
             )
         })
     }
