@@ -39,19 +39,37 @@ class GuitarScales extends React.Component{
     }
 
     getTab = () => {
-        return(
-            <div>
-                <img className='g-scales__tab' src={require(`./images/tab/${this.props.settings.scale}majTab.PNG`)} />
-            </div>
-        )
+        const scale = this.props.settings.scale
+        if(scale === 'F#'){
+            return(
+                <div>
+                    <img className='g-scales__tab' src={require(`./images/tab/GbmajTab.PNG`)} />
+                </div>
+            )
+        } else {
+            return(
+                <div>
+                    <img className='g-scales__tab' src={require(`./images/tab/${scale}majTab.PNG`)} />
+                </div>
+            )
+        }
     }
 
     getSheet = () => {
-        return(
-            <div>
-                <img className='g-scales__sheet' src={require(`./images/sheet/${this.props.settings.scale}majSheet.PNG`)} />
-            </div>
-        )
+        const scale = this.props.settings.scale
+        if(scale === 'F#'){
+            return(
+                <div>
+                    <img className='g-scales__tab' src={require(`./images/sheet/GbmajSheet.PNG`)} />
+                </div>
+            )
+        } else {
+            return(
+                <div>
+                    <img className='g-scales__tab' src={require(`./images/sheet/${scale}majSheet.PNG`)} />
+                </div>
+            )
+        }
     }
 
     render(){

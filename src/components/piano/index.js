@@ -79,7 +79,7 @@ class Piano extends React.Component {
     }
 
     scalesBtns = () => {
-        const scaleKeys = ['G', 'Ab', 'A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb']
+        const scaleKeys = ['G', 'Ab', 'A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'F#']
 
         return scaleKeys.map((note, ind) => {
             return(
