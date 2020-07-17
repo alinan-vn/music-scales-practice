@@ -17,6 +17,10 @@ class Guitar extends React.Component{
             btn.className = ''
             btn.classList.add('guitar__scaleBtn')
         }
+        this.setState({
+            ...this.state,
+            scale: false
+        })
     }
 
     scaleClick = (e) => {
@@ -32,10 +36,6 @@ class Guitar extends React.Component{
             })
         } else {
             this.resetScaleClasses(scaleBtn.parentElement)
-            this.setState({
-                ...this.state,
-                scale: false 
-            })
         }
     }
 

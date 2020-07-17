@@ -1,0 +1,61 @@
+.piano {
+    padding-top: 5rem;
+    text-align: center;
+
+    & h1 {
+        font-size: 4rem;
+        color: $third-color;
+    }
+
+    &__btns {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    &__btn {
+        background-color: $second-color;
+        color: $fourth-color;
+        font-size: 2rem;
+        padding: 1rem;
+        margin: 2rem;
+        border-radius: 32px;
+    }
+
+    &__scaleBtn {
+        background-color: $fourth-color;
+        color: $prime-color;
+        font-size: 2rem;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 16px;
+
+        &-clicked {
+            background-color: $second-color;
+            color: $prime-color;
+            font-size: 2rem;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 16px;
+        }
+    }
+
+    &__practice-btn {
+        background-color: $fifth-color;
+        color: $third-color;
+        font-size: 3rem;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 24px;
+    }
+
+    &__reset-scale {
+        background-color: $second-color;
+        color: $third-color;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        border-radius: 24px;
+    }
+}
