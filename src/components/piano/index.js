@@ -1,4 +1,5 @@
 import React from 'react';
+import PianoScales from './scales/index';
 
 class Piano extends React.Component {
     constructor(){
@@ -37,7 +38,7 @@ class Piano extends React.Component {
             return (
                 <div>
                     <button onClick={this.setPractice} className='piano__reset-scale'>Another scale?</button>
-                    {/* <GuitarScales settings={props} /> */}
+                    <PianoScales settings={props} />
 
                 </div>
             )
