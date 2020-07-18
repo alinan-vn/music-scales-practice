@@ -67,6 +67,16 @@ class Guitar extends React.Component{
         }
     }
 
+    chooseRandom = () => {
+        const scaleKeys = ['G', 'Ab', 'A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'F#']
+        let chosen = scaleKeys[Math.floor(Math.random() * (scaleKeys.length))] 
+        this.setState({
+            ...this.state,
+            scale: chosen
+        })
+        this.practice(chosen)
+    }
+
     scalesShow = () => {
         if(!this.state.practice){
             return(
@@ -78,6 +88,9 @@ class Guitar extends React.Component{
                     </div>
                     <div className='guitar__btns'>
                         { this.scalesBtns() }
+                    </div>
+                    <div className='guitar__btns'>
+                        <button onClick={this.chooseRandom} className='guitar__btn'>Random Scale ? </button>
                     </div>
                     <div> 
                         <button onClick={this.practice} className='guitar__practice-btn'>Practice!</button>
@@ -108,8 +121,10 @@ class Guitar extends React.Component{
         )
     }
 
-    practice = () => {
+    practice = (note= 'none') => {
         if(this.state.scale){
+            this.setPractice()
+        } else if (note !== 'none') {
             this.setPractice()
         } else {
             alert('Please select a Scale </3')
