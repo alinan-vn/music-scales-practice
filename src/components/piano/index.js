@@ -7,9 +7,19 @@ class Piano extends React.Component {
         this.state = {
             practice: false,
             sheetMusic: 'On',
-            keysShown: 'On',
+            keysShown: 'Off',
             scale: false
         }
+    }
+
+    chooseRandom = () => {
+        const scaleKeys = ['G', 'Ab', 'A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'F#']
+        let chosen = scaleKeys[Math.floor(Math.random() * (scaleKeys.length))] 
+        this.setState({
+            ...this.state,
+            scale: chosen
+        })
+        this.practice(chosen)
     }
     
     scalesShow = () => {
@@ -19,10 +29,13 @@ class Piano extends React.Component {
                     <h1>Piano (major) Scales!</h1>
                     <div className='piano__btns'>
                         <button onClick={(e) => this.readingType(e)} name='sheetMusic' className='piano__btn'>Sheet Music: {this.state.sheetMusic}</button>
-                        <button onClick={(e) => this.readingType(e)} name='keysShown' className='piano__btn'>Keys Tab: {this.state.keysShown}</button>
+                        {/* <button onClick={(e) => this.readingType(e)} name='keysShown' className='piano__btn'>Keys Tab: {this.state.keysShown}</button> */}
                     </div>
                     <div className='piano__btns'>
                         { this.scalesBtns() }
+                    </div>
+                    <div className='piano__btns'>
+                        <button onClick={this.chooseRandom} className='piano__btn'>Random Scale ? </button>
                     </div>
                     <div> 
                         <button onClick={this.practice} className='piano__practice-btn'>Practice!</button>
@@ -53,8 +66,10 @@ class Piano extends React.Component {
         )
     }
 
-    practice = () => {
+    practice = (note= 'none') => {
         if(this.state.scale){
+            this.setPractice()
+        } else if (note !== 'none') {
             this.setPractice()
         } else {
             alert('Please select a Scale </3')
