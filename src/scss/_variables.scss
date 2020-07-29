@@ -3,3 +3,29 @@ $second-color: #2a9d8f;
 $third-color: #e9c46a;
 $fourth-color: #f4a261;
 $fifth-color: #e76f51;
+
+
+// @mixin media-sm {
+//     @media screen and (min-width: 1024px) {
+//         @content;
+//     }
+// }
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}

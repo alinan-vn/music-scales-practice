@@ -1,0 +1,24 @@
+@include media-md {
+    .landing {
+        margin-top: 30vh;
+
+        & h1 {
+            font-size: 4rem;
+        }
+
+        &__btn {
+            margin: 2rem;
+            padding: 2rem;
+            font-size: 3rem;
+            border-radius: 32px;
+        }
+    }
+}
+
+@include media-lg {
+    .landing {
+        & h1 {
+            font-size: 5rem;
+        }
+    }
+}
