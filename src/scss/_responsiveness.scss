@@ -13,12 +13,51 @@
             border-radius: 32px;
         }
     }
+
+    .guitar {
+        padding-top: 5rem;
+
+        & h1 {
+            font-size: 3rem;
+            margin-bottom: -0.5rem;
+        }
+
+        &__btns {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        &__btn {
+            font-size: 2rem;
+            margin: 2rem;
+            width: 15rem;
+            height: 7rem;
+        }
+
+        &__scaleBtn {
+            font-size: 2rem;
+            padding: 2rem;
+            margin: 1rem;
+        }
+
+        &__practice-btn {
+            font-size: 3rem;
+            padding: 2rem;
+            margin: 1rem;
+        }
+    }
 }
 
 @include media-lg {
     .landing {
         & h1 {
             font-size: 5rem;
+        }
+    }
+
+    .guitar {
+        & h1 {
+            font-size: 4rem;
         }
     }
 }
