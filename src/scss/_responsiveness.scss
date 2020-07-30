@@ -46,6 +46,17 @@
             margin: 1rem;
         }
     }
+
+    .g-scales {
+        &__heading {
+            font-size: 4rem;
+        }
+
+        &__tab {
+            margin: 0;
+            transform: rotate(0);
+        }
+    }
 }
 
 @include media-lg {

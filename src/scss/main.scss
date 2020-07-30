@@ -9,5 +9,6 @@
 
 
 body {
-    background-image: linear-gradient(to right, rgba($prime-color, 1), rgba($fifth-color, 0.1));
+    // background-image: linear-gradient(to right, rgba($prime-color, 1), rgba($fifth-color, 0.1));
+    background: $prime-color;
 }
