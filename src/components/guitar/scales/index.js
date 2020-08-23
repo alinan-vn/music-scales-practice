@@ -43,13 +43,13 @@ class GuitarScales extends React.Component{
         if(scale === 'F#'){
             return(
                 <div>
-                    <img className='g-scales__tab' src={require(`./images/tab/GbmajTab.PNG`)} />
+                    <img className='g-scales__tab' src={require(`./images/tab/major-scale/GbmajTab.PNG`)} />
                 </div>
             )
         } else {
             return(
                 <div>
-                    <img className='g-scales__tab' src={require(`./images/tab/${scale}majTab.PNG`)} />
+                    <img className='g-scales__tab' src={require(`./images/tab/major-scale/${scale}majTab.PNG`)} />
                 </div>
             )
         }
@@ -60,13 +60,13 @@ class GuitarScales extends React.Component{
         if(scale === 'F#'){
             return(
                 <div>
-                    <img className='g-scales__tab' src={require(`./images/sheet/GbmajSheet.PNG`)} />
+                    <img className='g-scales__tab' src={require(`./images/sheet/major-scale/GbmajSheet.PNG`)} />
                 </div>
             )
         } else {
             return(
                 <div>
-                    <img className='g-scales__tab' src={require(`./images/sheet/${scale}majSheet.PNG`)} />
+                    <img className='g-scales__tab' src={require(`./images/sheet/major-scale/${scale}majSheet.PNG`)} />
                 </div>
             )
         }
