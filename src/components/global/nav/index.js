@@ -7,6 +7,7 @@ class Nav extends React.Component{
                 <ul className='nav-ul'>
                     <li className='nav-li'>
                         <a className='nav-a' href='/'>Home</a>
+                        <a className='nav-a' href='/learning'>Learn!</a>
                     </li>
                 </ul>
             </header>
