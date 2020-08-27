@@ -1,0 +1,30 @@
+.relative-scales {
+    padding-top: 5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__header {
+        text-align: center;
+    }
+
+    &__main {
+        font-size: 3rem;
+        color: $fifth-color;
+    }
+
+    &__sub {
+        font-size: 2rem;
+        color: $fourth-color;
+        width: 40vw;
+    }
+
+    &__list {
+        & > li {
+            list-style-type: none;
+            padding-top: 8px;
+            font-size: 2rem;
+            color: $second-color;
+        }
+    }
+}

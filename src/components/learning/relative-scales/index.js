@@ -4,13 +4,15 @@ class RelativeScales extends React.Component {
 
     render(){
         return(
-            <section>
-                <br /><br /><br /><br />
-                <h1>Relative Scales!</h1>
-                <h3>
-                    Major Scales have relative Minor Scales that contain the same notes as each other. These are also called <em>relative keys</em>
-                </h3>
-                <ul>
+            <section className='relative-scales'>
+                <div className='relative-scales__header'>
+                    <h1 className='relative-scales__main'>Relative Scales!</h1>
+                    <h3 className='relative-scales__sub'>
+                        Major Scales have relative Minor Scales that contain the same notes as each other. These are also called <em>relative keys</em>
+                    </h3>
+                </div>
+                
+                <ul className='relative-scales__list'>
                     <li>Cb - Abm</li>
                     <li>Gb - Ebm</li>
                     <li>Db - Bbm</li>
