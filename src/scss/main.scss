@@ -1,12 +1,17 @@
 @import './variables';
-@import './nav';
-@import './landing';
-@import './guitar';
-@import './g-scales';
-@import './piano';
-@import './p-scales';
 @import './responsiveness';
 
+@import './nav';
+@import './landing';
+
+@import './guitar/guitar';
+@import './guitar/g-scales';
+
+@import './piano/p-scales';
+@import './piano/piano';
+
+@import './learning/learning';
+@import './learning/relative-scales';
 
 body {
     // background-image: linear-gradient(to right, rgba($prime-color, 1), rgba($fifth-color, 0.1));

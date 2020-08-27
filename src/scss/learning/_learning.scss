@@ -1,0 +1,24 @@
+.learning {
+    padding-top: 5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__header {
+        font-size: 3rem;
+        color: $fifth-color;
+    }
+
+    &__list {
+        &-li {
+            list-style-type: none;
+            padding-top: 2rem;
+            font-size: 2rem;
+        }
+
+        &-li > a {
+            text-decoration: none;
+            color: $second-color;
+        }
+    }
+}

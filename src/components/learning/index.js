@@ -4,11 +4,13 @@ class learning extends React.Component {
 
     render(){
         return(
-            <section>
-                <br /><br /><br /><br />
-                <h1>Check out the topics!</h1>
-                <ul>
-                    <li>
+            <section className='learning'>
+                <h1 className='learning__header'>Check out the topics!</h1>
+                <ul className='learning__list'>
+                    <li className='learning__list-li'>
+                        <a href='/relative-scales'>Relative Scales</a>
+                    </li>
+                    <li className='learning__list-li'>
                         <a href='/relative-scales'>Relative Scales</a>
                     </li>
                 </ul>
